@@ -1,0 +1,283 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+    .form-group {
+        margin-bottom: 1em;
+    }
+</style>
+    <header class="masthead bg-white text-center mb-5">
+    <div class="container d-flex align-items-center flex-column mb-5">
+        <h1>Formulario para clasificar un paciente nuevo</h1>
+        <div class="container mb-3"><i class="fas fa-star"></i></div>
+    </div>
+    </header>
+    <div class="container">
+        <form style="width:100%" id="miFormulario">
+            <div class="row" style="width:100%">
+                <div class="col-md-5"  style="width:50%">
+                    <div class="form-group">
+                        <label>HighBP:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="HighBP" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="HighBP" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>HighChol:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="HighChol" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="HighChol" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>CholCheck:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="CholCheck" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="CholCheck" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>BMI (Enteros positivos):</label><br>
+                        <input class="form-control" type="text" name="BMI" pattern="[0-9]+" value="0" title="Por favor, ingresa un número entero positivo">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Smoker:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Smoker" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Smoker" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Stroke:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Stroke" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Stroke" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>HeartDiseaseorAttack:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>PhysActivity:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="PhysActivity" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="PhysActivity" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fruits:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Fruits" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Fruits" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Veggies:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Veggies" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Veggies" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>HvyAlcoholConsump:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="HvyAlcoholConsump" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="HvyAlcoholConsump" value=0> No
+                        </div>
+                    </div>
+
+                </div>
+                <!-- SEGUNDA COLUMNA DEL FORMULARIO -->
+                <div class="col-md-5" style="width:50%">
+                    
+
+                    <div class="form-group">
+                        <label>AnyHealthcare:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="AnyHealthcare" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="AnyHealthcare" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>NoDocbcCost:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="NoDocbcCost" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="NoDocbcCost" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>GenHlth:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="GenHlth" value=1 checked> 1
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="GenHlth" value=2> 2
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="GenHlth" value=3> 3
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="GenHlth" value=4> 4
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="GenHlth" value=5> 5
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>MentHlth (Enteros positivos):</label><br>
+                        <input class="form-control" type="text" name="MentHlth" pattern="[0-9]+" value="0" title="Por favor, ingresa un número entero positivo">
+                    </div>
+
+                    <div class="form-group">
+                        <label>PhysHlth (Enteros positivos):</label><br>
+                        <input class="form-control" type="text" name="PhysHlth" pattern="[0-9]+" value="0" title="Por favor, ingresa un número entero positivo">
+                    </div>
+
+                    <div class="form-group">
+                        <label>DiffWalk:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="DiffWalk" value=1 checked> Sí
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="DiffWalk" value=0> No
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sex:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Sex" value=1 checked> Hombre
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Sex" value=0> Mujer
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Age (Enteros positivos):</label><br>
+                        <input class="form-control" type="text" name="Age" pattern="[0-9]+" value="10" title="Por favor, ingresa un número entero positivo">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Education (Menos a más):</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Education" value=1 checked> 1
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Education" value=2> 2
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Education" value=3> 3
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Education" value=4> 4
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Education" value=5> 5
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Education" value=6> 6
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Algoritmo:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="algorithm" value=kmeans checked> KMeans
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="algorithm" value=kmedoids> KMedoids
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="algorithm" value=affinitypropagation> Affinity Propagation
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="algorithm" value=dbscan> DBScan
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="algorithm" value=optics> Optics
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="algorithm" value=kprototypes> K-Prototypes
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Income (Menos a más):</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Income" value=1 checked> 1
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Income" value=2> 2
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Income" value=3> 3
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Income" value=4> 4
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Income" value=5> 5
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Income" value=6> 6
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Income" value=7> 7
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Income" value=8> 8
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="container d-flex align-items-center flex-column mb-5" style="width:100%">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%">CLUSTERIZAR PACIENTE</button>
+            </div>
+        </form>
+    </div>
+<script src="static/js/make_cluster.js"></script>
+{% endblock %}

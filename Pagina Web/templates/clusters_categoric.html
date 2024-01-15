@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<style>
+    .btn-group > .btn {
+        flex: 1;
+        margin: 1em;
+    }
+</style>
+
+<div class="container-fluid" style="margin-top: -2em;" >
+    <div class="row">
+        <div class="col">
+            <!-- Botones que ocupan todo el ancho -->
+            <div class="btn-group btn-group-lg d-flex" role="group">
+                <button id="cluster1" type="button" class="btn btn-info flex-fill fw-bold">K-Prototypes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <div class="text-center"> <!-- Centro el contenido -->
+            <h1>DATAFRAME DEL ALGORITMO </h1>
+            <div class="container mb-3"><i class="fas fa-star"></i></div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="text-center"> <!-- Centro el contenido -->
+          <h1>INDICE DE SILUETA POR CLUSTER</h1>
+          <div class="container mb-3"><i class="fas fa-star"></i></div>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="col-auto">
+            <label for="columnFilter" class="col-form-label fw-bold">Filtrar por columna:</label>
+          </div>
+          <div class="col-auto">
+            <select id="columnFilter" class="form-select">
+              <option value="0">Cluster</option>
+              <option value="1">Variable</option>
+              <option value="2">Values</option>
+            </select>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="valueFilter" placeholder="Valor a filtrar">
+          </div>
+        <div class="table-responsive" style="max-height: 400px;">
+          <table class="table table-bordered" id="myTable">
+            <thead>
+              <tr>
+                <th>Cluster</th>
+                <th>Variable</th>
+                <th>Values</th>
+                <th>Info</th>
+              </tr>
+            </thead>
+            <tbody id="myTableBody">
+                
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div id="chartDiv" style="height:35em;"></div>
+      </div>
+    </div>
+</div>
+
+
+
+  <script src="static/js/clusters_categoric.js"></script>
+
+{% endblock %}

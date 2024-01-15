@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+  .btn-group > .btn {
+      flex: 1;
+      margin: 1em;
+  }
+</style>
+<div class="container-fluid" style="margin-top: -2em;" >
+  <div class="row">
+      <div class="col">
+          <!-- Botones que ocupan todo el ancho -->
+          <div class="btn-group btn-group-lg d-flex" role="group">
+              <button id="button1" type="button" class="btn btn-info flex-fill fw-bold">Coeficiente de Punto Biserial con Diabetes</button>
+              <button id="button2" class="btn btn-info flex-fill fw-bold">Heatmap de Tabla de Contingencia</button>
+              <button id="button3" class="btn btn-info flex-fill fw-bold">Coeficiente de Contingencia con Diabetes</button>
+              <button id="button4" class="btn btn-info flex-fill fw-bold">Distribución de Valores</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container d-flex align-items-center flex-column">
+  <!-- Intercorrelacion -->
+  <img id="img1" class="masthead-avatar mb-5" style="width: 40em; height: 35em;" src="static/img/dataset/biseral.png" alt="..." />
+  <img hidden id="img2" class="masthead-avatar mb-5" style="width: 42m; height: 42em; " src="static/img/dataset/contingencia.png" alt="..." />
+  <img hidden id="img3" class="masthead-avatar mb-5" style="width: 50em; height: 35em;" src="static/img/dataset/contingencia2.png" alt="..." />
+  <img hidden id="img4" class="masthead-avatar mb-5" style="width: 42em; height: 42em;" src="static/img/dataset/distribution.png" alt="..." />
+</div>
+
+
+<script src="static/js/dataset.js"></script>
+{% endblock %}
